@@ -3,10 +3,16 @@ package CursoJava.TResourceBundle;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class REsourceBundleTest01 {
+public class ResourceBundleTest01 {
     public static void main(String[] args) {
         System.out.println(Locale.getDefault());
-        ResourceBundle.getBundle("message", new Locale("pt", "BR"));
-        
+        ResourceBundle bundle = ResourceBundle.getBundle("message", new Locale("pt", "BR"));
+        System.out.println(bundle.getString("ola"));
+        System.out.println(bundle.getString("bom.dia"));
+
+        ResourceBundle bundle2 = ResourceBundle.getBundle("messages", new Locale("en", "US"));
+        System.out.println(bundle2.getString("ola"));
+        System.out.println(bundle2.getString("bom.dia"));
+
     }
 }
