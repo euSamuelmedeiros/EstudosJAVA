@@ -2,11 +2,11 @@ package CursoJava.Qregex;
 
 import java.util.Scanner;
 
-public class ScannerTest02 {
+public class TresinoToken01 {
     public static void main(String[] args) {
-        String txt = "samuel, pedro, muriloPote, 200, true";
+        String txt = "joao-23-true-ana-30-false-maria-45-true";
         Scanner scanner = new Scanner(txt);
-        scanner.useDelimiter(",\\s*");
+        scanner.useDelimiter("-");
 
         while (scanner.hasNext()) {
             if (scanner.hasNextInt()) {
@@ -15,14 +15,12 @@ public class ScannerTest02 {
             } else if (scanner.hasNextBoolean()) {
                 boolean b = scanner.nextBoolean();
                 System.out.println("boolean " + b);
-            } else {
-                String str = scanner.next();
-                System.out.println(  str);
-            }
-        }
-         
 
-        scanner.close();
+            } else {
+                System.out.println("string: " + scanner.next());
+            }
+
+        }
+
     }
 }
-
