@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PatternmatcherTEst01 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
         String regex = "ab";
         String tex = "abbabababa";
         Pattern pattern = Pattern.compile(regex);
