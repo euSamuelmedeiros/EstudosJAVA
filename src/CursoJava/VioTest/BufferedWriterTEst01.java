@@ -13,7 +13,7 @@ public class BufferedWriterTEst01 {
         try (FileWriter fw = new FileWriter(file, true);
              BufferedWriter br = new BufferedWriter(fw)) {
 
-            br.write("o Java ainda vai me abriri muitas portas. \nContinuar...");
+            br.write("o Java ainda vai me abrir muitas portas. \nContinuar...");
             br.flush();
 
         } catch (IOException ex) {
