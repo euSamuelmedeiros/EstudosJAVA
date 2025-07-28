@@ -1,10 +1,13 @@
 package XSerialization.Domain;
 
-public class Aluno {
-    
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Aluno  implements Serializable{
+    @Serial
     private long id;
     private String name;
-    private String senha;
+    private transient String senha;
 
     public Aluno(long id, String name, String senha) {
         this.id = id;
