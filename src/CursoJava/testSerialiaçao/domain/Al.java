@@ -1,31 +1,23 @@
-package XSerialization.Domain;
+package CursoJava.testSerialiaçao.domain;
 
-import java.io.Serial;
 import java.io.Serializable;
 
-public class Aluno  implements Serializable{
-    @Serial
-    private long id;
+public class Al implements Serializable{
     private String name;
+    private long id;
     private transient String senha;
 
-    public Aluno(long id, String name, String senha) {
-        this.id = id;
-        this.name = name;
-        this.senha = senha;
-    }
+
 
     @Override
     public String toString() {
-        return "Aluno [id=" + id + ", name=" + name + ", senha=" + senha + "]";
+        return "al [name=" + name + ", id=" + id + ", senha=" + senha + "]";
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
+    public Al(String name, long id, String senha) {
+        this.name = name;
         this.id = id;
+        this.senha = senha;
     }
 
     public String getName() {
@@ -36,6 +28,14 @@ public class Aluno  implements Serializable{
         this.name = name;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        long Id = id;
+    }
+
     public String getSenha() {
         return senha;
     }
@@ -43,4 +43,5 @@ public class Aluno  implements Serializable{
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
 }
